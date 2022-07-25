@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="dashboard"></section>
+<section class="container">
+    <div class="dashboard_box">
+        <div class="left">
+            <div class="top_link">
+                <a href="{% url 'home' %}" > &#8592;&nbsp;&nbsp;Return home</a>
+            </div>
+            <div class="contact dashboard_sec" style="flex-direction: column;">
+                <h3>Sorry! Looks like you're not signed in to book the fields.</h3>
+                <p>Please click the button below to sign in.</p>
+                <br>
+                <br>
+                <div class="btn custom-btn bordered mt-3 aos-init aos-animate">
+                <a href="{% url 'signup' %}"  style="color: #cc6047;">&nbsp;&nbsp;Sign up</a>
+            </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-text">
+                <h2>NCS</h2>
+                <h5>Let's Get Your Booking Done</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

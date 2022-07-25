@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="display_booking"></section>
+<section class="container">
+    <div class="booking_box">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'managerDashboard' %}" > &#8592;&nbsp;&nbsp;Return back</a>
+            </div>
+            <div class="contact dashboard_sec booking-form">
+                {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <h3 style="color: #13294B; ;"> Bookings for Slot </h3>
+
+  {% if bookings_per_date %}
+  <ul>
+      {% for booking in bookings_per_date %}
+        <li><a href ='userBookingDetails/{{ booking.id }}'> Field No.:  {{ booking.booked_room_number.room_number }} </a></li>
+<!--        <li><a href ='userBookingDetails/{{ booking.id }}'> Room No.:  {{ booking.date_price.room_price }} </a></li>-->
+      {% endfor %}
+  </ul>
+  {% else %}
+        <p> No Bookings available for selected slot . </p>
+  {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
+

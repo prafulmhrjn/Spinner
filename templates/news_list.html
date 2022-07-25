@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+ <!-- NEWS LIST  -->
+<div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="top-text header-text">
+            <h1>News List</h1>
+          </div>
+        </div>
+      </div>
+        <div class="float-right">
+                <a href="{% url 'news_insert' %}" class="btn btn-outline-success">
+                    <i class="fa fa-plus"></i>&nbsp;Add New
+                </a>
+        </div>
+        <table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Snippets</td>
+            <td>Publisher</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for news in news_list %}
+            <tr>
+                <td>{{news.news_title}}</td>
+                <td>{{news.news_description}}</td>
+                <td>{{news.news_snippets}}</td>
+                <td>{{news.news_publisher}}</td>
+                <td>
+                    <a href="{% url 'news_detail' news.id %}" class="btn text-secondary px-0">
+                        <i class="fa fa-eye fa-lg"></i>
+                    </a>
+                    <a href="{% url 'news_update' news.id %}" class="btn text-secondary">
+                        <i class="fa fa-edit fa-lg"></i>
+                    </a>
+
+                    <form action="{% url 'news_delete' news.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">
+                            <i class="fa fa-trash fa-lg text-danger float-right"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    </div>
+  </div>
+
+
+{% endblock content %}

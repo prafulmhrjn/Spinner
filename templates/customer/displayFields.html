@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- AVAILABLE FieldS -->
+
+<section class="display-dashboard"></section>
+<section class="container">
+    <div class="display_box">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'customerDashboard' %}" > &#8592;&nbsp;&nbsp;Return Back</a>
+            </div>
+            <div class="contact dashboard_sec">
+                <h3>Available Fields for Selected Time Slot</h3>
+
+            </div>
+            <div class="contact dashboard_sec">
+                <div class="table">
+                    {% if room_list_for_slot %}
+                    <ul id="horizontal-list" style="display: flex;
+    flex-wrap: wrap; margin-top: 6rem;">
+                    {% for room in room_list_for_slot %}
+                        <a href = {{ room.id }} style="padding-bottom: 2rem;" >
+                            <li>
+                                {{ room.room_number }}
+                            </li>
+                        </a>
+                    {% endfor %}
+                    </ul>
+                    {% else %}
+                    <p>No Fields are available for selected time slot.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
+

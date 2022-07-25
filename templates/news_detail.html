@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+ <!-- NEWS FORM -->
+
+<div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+            {% for news in news_detail %}
+          <div class="top-text header-text">
+              <h1>{{news.news_title}}</h1>
+          </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% if user.is_staff %}
+<div class="options_detail">
+    <div class="container">
+        {% for news in news_detail %}
+        <a href="{% url 'news_update' news.id %}" class="btn btn-lg options_button">
+            <i class="fa fa-edit "></i> Edit news
+        </a>
+        <a href="{% url 'news_delete' news.id %}" class="btn btn-lg">
+            <i class="fa fa-trash "></i> Delete news
+        </a>
+        {% endfor %}
+    </div>
+</div>
+&nbsp;{% else %}
+{% endif %}
+<div class="news_details news-form">
+    <div class="container">
+        {% for news in news_detail %}
+        <p style="text-align: center;"><span style="font-style: italic;">{{news.news_snippets}}</span></p>
+        <br>
+        <p>{{news.news_publisher}}</p>
+        <br>
+        <p>{{news.news_description}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

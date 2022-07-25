@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="hero-sub4">
+    <div class="container">
+    <div class="booking_box detail">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'getAllBookedDates' %}" > &#8592;&nbsp;&nbsp;Return Back</a>
+            </div>
+            <div class="contact2 dashboard_sec booking-form">
+                <h3>Booking Details: </h3>
+                <br>
+                {% if user_booking %}
+                <div class='table'>
+
+            <div class="row">
+                <div class="cell">
+                    Name :
+                </div>
+                <div class="cell">
+                     {{ user_booking.customer_name }}
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="cell">
+                   E-mail :
+                </div>
+                <div class="cell">
+                     {{ user_booking.customer_email }}
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="cell">
+                   User-Id :
+                </div>
+                <div class="cell">
+                     {{ user_booking.bookee_username }}
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="cell">
+                   Contact :
+                </div>
+                <div class="cell">
+                     {{ user_booking.customer_contact }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell">
+                  Booking Purpose :
+                </div>
+                <div class="cell">
+                     {{ user_booking.booking_purpose }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell">
+                  Field Number :
+                </div>
+                <div class="cell">
+                     {{ user_booking.booked_room_number.room_number }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell">
+                   Date :
+                </div>
+                <div class="cell">
+                      {{ user_booking.booking_date_slot.booking_date }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cell">
+                   Slot :
+                </div>
+                <div class="cell">
+                     {{ user_booking.booking_date_slot.booking_slot }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                   Price :
+                </div>
+                <div class="cell">
+                     {{ user_booking.booking_date_slot.booking_price }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                   Payment Method :
+                </div>
+                <div class="cell">
+                      {{ user_booking.payment_method }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                   Payment Completed :
+                </div>
+                <div class="cell">
+                      {{ user_booking.payment_completed }}
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <a class="button-delete btn form-control custom-btn bg-color mt3 aos-init aos-animate link-btn" style="font-size : 20 px;" href="#popup1">Cancel Booking</a>
+        </div>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <h5> Are you Sure?</h5>
+                <form method = 'POST' >
+                    {% csrf_token %}
+                    <p> <input class = "button-delete btn form-control custom-btn bg-color mt3 aos-init aos-animate" type = 'submit' value = "yes"/> <a href='../'></a></p>
+                </form>
+
+            </div>
+        </div>
+
+    {% else %}
+        <p>No booking exist for selected Id.</p>
+    {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+
+        <div class="bg-overlay"></div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-md-10 mx-auto col-12">
+                    <div class="hero-text mt-5 text-center">
+
+                        <h6 data-aos="fade-up" data-aos-delay="300">One of The First Indoor Cricket In Nepal </h6>
+
+                        <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">GET YOUR BOOKING FOR NEXT GAME</h1>
+
+                        <a href="{% url 'signup' %}" class="btn custom-btn sub-bordered mt-3" data-aos="fade-up" data-aos-delay="600">Signup</a>
+
+                        <a href="{% url 'login' %}" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">Login</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="feature" id="feature">
+        <div class="container">
+            <div class="row">
+
+                <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
+                    <h2 class="mb-3 text-white" data-aos="fade-up">@NCS INDOOR CRICKET</h2>
+
+                    <h6 class="mb-4 text-white" data-aos="fade-up">TRAIN, PLAY & GROW</h6>
+
+                    <p data-aos="fade-up" data-aos-delay="200" class="text-white">NCS brings you first indoor cricket where you can book games, train with professionals and grow as a career</p>
+
+                    <a href="#" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="#membershipForm">See Articles</a>
+                </div>
+
+                <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
+                    <div class="about-working-hours">
+                        <div>
+
+                            <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">We are open at</h2>
+
+                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Sunday-Saturday</strong>
+
+                            <p data-aos="fade-up" data-aos-delay="800" class="text-white">07:00 AM - 09:00 PM</p>
+
+                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Tuesday</strong>
+
+                            <p data-aos="fade-up" data-aos-delay="800" class="text-white">6:00 AM - 01:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- Book now -->
+    <section class="booknow" id="booknow">
+        <div class="container">
+            <div class="row">
+                <span style="color: white; font-size: 50px;">Let's Get Your Booking Done</span>
+                <div>
+                    <!-- <a href="#" class="btn custom-btn bordered mt-12 col-lg-2" data-aos="fade-up" data-aos-delay="700" style="margin-left: 1000px;">Book</a> -->
+                    <button type="button" class="btn custom-btn bordered mt-12 col-lg-12" style="margin-left: 150px; margin-top: 20px;">
+                        <a href="{% url 'customerDashboard' %}" style="color: #cc6047;">Book Now</a></button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
+                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">About Us</h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Nepal Cricket school is an indoor facility where the players receive professional cricket training sessions from the finest coaches of the country 6 days a week, twice a day , one in the morning from 6 am- 8am & the other in the afternoon
+                        from 4 pm - 6 pm.</p>
+                </div>
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Ram Bahadur Thapa</h3>
+                            <span>CEO</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="800">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLASS -->
+    <section class="class section" id="class">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 text-center mb-5">
+                    <h6 data-aos="fade-up">Get Yourself a Trainer</h6>
+
+                    <h2 data-aos="fade-up" data-aos-delay="200">Our Professionals</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="class-thumb">
+                        <img src="{% static 'images/team/trainer1.jpg' %}" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-1">Batting</h3>
+
+                            <span><strong>Trained by</strong> - Paras Khadka</span>
+
+                            <span class="class-price">Rs 8500</span>
+
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="class-thumb">
+                        <img src="{% static 'images/team/trainer6.png' %}" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-1">Bowling</h3>
+
+                            <span><strong>Trained by</strong> - Sandeep Khadka</span>
+
+                            <span class="class-price">Rs 5000</span>
+
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="class-thumb">
+                        <img src="{% static 'images/team/trainer4.jpeg' %}" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-1">Feilding</h3>
+
+                            <span><strong>Trained by</strong> - Sompal Kami</span>
+
+                            <span class="class-price">Rs 3000</span>
+
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+			<br>
+			<a href="{% url 'home' %}" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700" >View More</a>
+        </div>
+    </section>
+
+    <!-- Stories -->
+    <section class="schedule section" id="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12 text-center">
+                    <h6 data-aos="fade-up">Our Recent Stories</h6>
+<h2 data-aos="fade-up" data-aos-delay="200">News</h2>
+                </div>
+                <div class="col-lg-12 col-12 text-center mb-5">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="class-thumb">
+                        <img src="{% static 'images/team/news1.jpeg' %}" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-3">NCS Indoor Cricket Tournament</h3>
+
+                            <p class="mt-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a class="btn btn-link custom-btn bordered mt-3" href="{% url 'news_main' %}" role="button">See More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="class-thumb">
+                        <img src="{% static 'images/team/news2.jpg' %}" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-3">NCS Indoor Cricket Tournament</h3>
+
+                            <p class="mt-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a class="btn btn-link custom-btn bordered mt-3" href="{% url 'news_main' %}" role="button">See More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="class-thumb">
+                        <img src="{% static 'images/team/news3.jpg' %}" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-3">NCS Indoor Cricket Tournament</h3>
+
+                            <p class="mt-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a class="btn btn-link" href="{% url 'news_main' %}" role="button">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section " id="contact ">
+        <div class="container ">
+            <div class="row ">
+
+                <div class="ml-auto col-lg-5 col-md-6 col-12 ">
+                    <h2 class="mb-4 pb-2 " data-aos="fade-up " data-aos-delay="200 ">Contact Us</h2>
+
+                    <form action="# " method="post " class="contact-form webform " data-aos="fade-up " data-aos-delay="400 " role="form ">
+                        <input type="text " class="form-control " name="cf-name " placeholder="Name ">
+
+                        <input type="email " class="form-control " name="cf-email " placeholder="Email ">
+
+                        <textarea class="form-control " rows="5 " name="cf-message " placeholder="Message "></textarea>
+
+                        <button type="submit " class="btn  form-control mt3 aos-init aos-animate" id="submit-button" name="submit" >Send Message</button>
+                    </form>
+
+                </div>
+
+                <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12 ">
+                    <h2 class="mb-4 " data-aos="fade-up " data-aos-delay="600 ">Location</h2>
+
+                    <div class="google-map " data-aos="fade-up " data-aos-delay="900 ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14128.379722314565!2d85.3373998!3d27.7143551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe9fc1c0f9ce6a8d0!2sNepal%20Cricket%20School%20(%20NCS%20)!5e0!3m2!1sen!2snp!4v1645336370680!5m2!1sen!2snp"
+                            width="2000 " height="300 " frameborder="0 " style="border:0; " allowfullscreen=" "></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade " id="membershipForm " tabindex="-1 " role="dialog " aria-labelledby="membershipFormLabel " aria-hidden="true ">
+        <div class="modal-dialog " role="document ">
+
+            <div class="modal-content ">
+                <div class="modal-header ">
+
+                    <h2 class="modal-title " id="membershipFormLabel ">Membership Form</h2>
+
+                    <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+              <span aria-hidden="true ">&times;</span>
+            </button>
+                </div>
+
+                <div class="modal-body ">
+                    <form class="membership-form webform " role="form ">
+                        <input type="text " class="form-control " name="cf-name " placeholder="John Doe ">
+
+                        <input type="email " class="form-control " name="cf-email " placeholder="Johndoe@gmail.com ">
+
+                        <input type="tel " class="form-control " name="cf-phone " placeholder="123-456-7890 " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4} " required>
+
+                        <textarea class="form-control " rows="3 " name="cf-message " placeholder="Additional Message "></textarea>
+
+                        <button type="submit " class="form-control " id="submit-button " name="submit ">Submit Button</button>
+
+                        <div class="custom-control custom-checkbox ">
+                            <input type="checkbox " class="custom-control-input " id="signup-agree ">
+                            <label class="custom-control-label text-small text-muted " for="signup-agree ">I agree to the <a href="# ">Terms &amp;Conditions</a>
+                    </label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer "></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

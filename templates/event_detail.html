@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+ <!-- NEWS FORM -->
+
+<div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+            {% for events in event_detail %}
+          <div class="top-text header-text">
+              <h1>{{events.event_title}}</h1>
+          </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% if user.is_staff %}
+<div class="options_detail">
+    <div class="container">
+        {% for events in event_detail %}
+        <a href="{% url 'event_update' events.id %}" class="btn btn-lg options_button">
+            <i class="fa fa-edit "></i> Edit news
+        </a>
+        <a href="{% url 'event_delete' events.id %}" class="btn btn-lg">
+            <i class="fa fa-trash "></i> Delete news
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+{% endif %}
+&nbsp;
+<div class="news_details news-form">
+    <div class="container">
+        {% for events in event_detail %}
+        <p style="text-align: center;"><span style="font-style: italic;">{{events.event_snippet}}</span></p>
+        <br>
+        <p>{{events.event_date_time}}</p>
+        <br>
+        <p>{{events.event_description}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

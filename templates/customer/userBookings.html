@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- CUSTOMER Field BOOKING -->
+
+
+<section class="hero-sub3">
+    <div class="container">
+    <div class="booking_box list">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'customerDashboard' %}" > &#8592;&nbsp;&nbsp;Book New</a>
+            </div>
+            <div class="contact2 dashboard_sec">
+                <h3>Your Bookings</h3>
+                <br>
+
+                {% if user_booking_list %}
+                <table class="neumorphic">
+                    {% if user_booking_list %}
+                    <ol>
+                        {% for booking in user_booking_list %}
+
+                        <li>
+                            <a href ='{{ booking.id }}'> {{ booking }} - &nbsp &nbsp{{ booking.booking_date_slot.booking_date }} </a>                       </li>
+                    <br>
+                    {% endfor %}
+                    </ol>
+                    {% endif %}
+                </table>
+                {% else %}
+                <p> No bookings are available. </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+ <!-- NEWS LIST  -->
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-8">
+          <div class="top-text header-text">
+            <h1>Event List</h1>
+          </div>
+        </div>
+      </div>
+        <div class="float-right">
+                <a href="{% url 'event_insert' %}" class="btn btn-outline-success">
+                    <i class="fa fa-plus"></i>&nbsp;Add New Event
+                </a>
+        </div>
+        <table class="table table-borderless">
+            <thead class="border-bottom font-weight-bold">
+                <tr>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Snippet</td>
+            <td>Date Time</td>
+            <td>Location</td>
+            <td></td>
+        </tr>
+            </thead>
+            <tbody>
+        {% for events in event_list %}
+            <tr>
+                <td>{{events.event_title}}</td>
+                <td>{{events.event_description}}</td>
+                <td>{{events.event_snippet}}</td>
+                <td>{{events.event_date_time}}</td>
+                <td>{{events.event_location}}</td>
+                <td>
+                    <a href="{% url 'event_detail' events.id %}" class="btn text-secondary px-0">
+                        <i class="fa fa-eye fa-lg"></i>
+                    </a>
+                    <a href="{% url 'event_update' events.id %}" class="btn text-secondary">
+                        <i class="fa fa-edit fa-lg"></i>
+                    </a>
+
+                    <form action="{% url 'event_delete' events.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">
+                            <i class="fa fa-trash fa-lg text-danger float-right"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+        </table>
+    </div>
+  </div>
+
+
+{% endblock content %}

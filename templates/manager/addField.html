@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-sub3">
+    <div class="container">
+        <div class="booking_box list">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'managerDashboard' %}" > &#8592;&nbsp;&nbsp;Return home</a>
+            </div>
+            <div class="contact2 mdb mdb-list dashboard_sec">
+                <h3>Add Fields</h3>
+                {% if slot_list_unbooked %}
+                <ul>
+                    {% for slot in slot_list_unbooked %}
+                        <li>  <a href ='addfield/{{ slot.id }}'> <p> {{ slot }}</p> </a> </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                      <h5> Add Slot First </h5>
+                {% endif %}
+
+                {% if slot_list_booked %}
+                  <h3>  Fields Alloted For Slot  </h3>
+                  <ul>
+                      {% for slot in slot_list_booked %}
+                       <li> {{ slot }} </li> <br>
+                      {% endfor %}
+                  </ul>
+                  {% else %}
+
+                  {% endif %}
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<div class="wrap">
+
+  <script>
+    $(function(){
+        $('.datepicker').datepicker({
+            endDate: '+0d',
+            autoclose: true
+        });
+    });
+  </script>
+
+
+</div>
+
+{% endblock %}

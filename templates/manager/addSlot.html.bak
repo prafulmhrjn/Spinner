@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="display-dashboard"></section>
+<section class="container">
+    <div class="display_box">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'managerDashboard' %}" > &#8592;&nbsp;&nbsp;Return home</a>
+            </div>
+            <div class="contact slot dashboard_sec">
+                <h3>Add Slot</h3>
+            </div>
+            <div class="contact dashboard_sec">
+                {% if messages %}
+                    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+                {% else %}
+
+                {% endif %}
+
+                <form method = "POST">
+
+                    {% csrf_token %}
+                    {{ form.as_p}}
+
+                    <input class="btn form-control bg-color mt3 aos-init aos-animate link-btn" type="submit" value="Submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

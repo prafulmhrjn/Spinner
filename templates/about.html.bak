@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- ABOUT -->
+<section class="article section">
+    <div class="container">
+        <h1 data-aos="fade-up" data-aos-delay="200">About</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Nepal Cricket school is an indoor facility where the players receive professional cricket training sessions from the finest coaches of the country 6 days a week, twice a day , one in the morning from 6 am- 8am & the other in the afternoon
+                        from 4 pm - 6 pm.</p>
+        <br>
+        <div class="row" data-aos="fade-up" data-aos-delay="250">
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" >
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Ram Bahadur Thapa</h3>
+                            <span>CEO</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" >
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br>
+        <div class="row" data-aos="fade-up" data-aos-delay="250">
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" >
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Ram Bahadur Thapa</h3>
+                            <span>CEO</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" >
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br>
+        <div class="row" data-aos="fade-up" data-aos-delay="250">
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" >
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Ram Bahadur Thapa</h3>
+                            <span>CEO</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" >
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
+                    <div class="team-thumb">
+                        <img src="{% static 'images/team/team-image01.jpg' %}" class="img-fluid" alt="Trainer">
+                        <div class="team-info d-flex flex-column">
+                            <h3>Hari Bahadur Shakya</h3>
+                            <span>Trainer</span>
+                            <ul class="social-icon mt-3">
+                                <li>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+{% endblock content %}

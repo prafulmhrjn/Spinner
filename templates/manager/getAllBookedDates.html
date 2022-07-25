@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-sub">
+    <div class="container">
+    <div class="booking_box now">
+        <div class="display">
+            <div class="top_link">
+                <a href="{% url 'managerDashboard' %}" > &#8592;&nbsp;&nbsp;Return Back</a>
+            </div>
+            <div class="contact dashboard_sec booking-form">
+                {% if messages %}
+                <ul class="messages">
+                  {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+
+                <h3> Booking Dates </h3>
+                {% if booking_dates %}
+                  <ul>
+                    {% for date in booking_dates %}
+                      <li><a href ='getAllBookedDates/{{ date.id }}'>{{ date.booking_date }}: {{ date.booking_slot }} - Rs. {{ date.booking_price}} </a></li><br>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                      <p> Invalid </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+{% endblock %}
+

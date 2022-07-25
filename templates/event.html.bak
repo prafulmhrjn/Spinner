@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+ <!-- EVENTS -->
+{% if user.is_staff %}
+<div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 float-right">
+          <div class="top-text header-text float-right" style="margin-top: 5rem;
+    margin-bottom: -10rem;">
+            <a href="{% url 'event_insert' %}" class="btn btn-outline-success">
+                    <i class="fa fa-plus"></i>&nbsp;Add New
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+{% endif %}
+    <section class="events section">
+    <div class="container">
+        <h1 data-aos="fade-up" data-aos-delay="200">Events</h1>
+        <div class="row view-style" data-aos="fade-up" data-aos-delay="200">
+            {% for events in show_events %}
+                <div class="class-thumb col">
+                        <h3 class="mb-3">{{events.event_title}}</h3>
+                        <p class="mt-12">{{events.event_snippet}}</p>
+                    <p>{{events.event_date_time}}</p>
+                    <p>{{events.event_location}}</p>
+                    <div class="float-right">
+                        <a class="btn btn-link" href="{% url 'event_detail' events.id %}" role="button">See More ... </a>
+                    </div>
+
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+    </section>
+
+{% endblock content %}
+    

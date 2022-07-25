@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- CUSTOMER DASHBOARD -->
+<section class="hero-sub">
+    <div class="container">
+        <div class="dashboard_box">
+            <div class="left">
+                <div class="contact dashboard_sec">
+                    <div>
+                        <h3>Customer Dashboard</h3>
+                    {% if date_slot_list %}
+                    <h4> Available Slots for Booking: </h4>
+                    <div class="table">
+                {% for slots in date_slot_list %}
+                    <div class="column">
+                      <a href="{{ slots.id }}/">
+                        <div class="cell">
+                            {{ slots.booking_date }} &nbsp; {{ slots.booking_slot }}
+                        </div>
+                      </a>
+                    </div>
+                {% endfor %}
+
+                {% else %}
+                    <p>No Slots are available.</p>
+                {% endif %}
+                    <br>
+                {% if full_slots %}
+                    <h4> Full Slots :</h4>
+                    <div class="table" style="background-color: transparent;">
+                    {% for slots in full_slots %}
+                        <div class="column">
+                            <a href="{{ slots.id }}/">
+                                <div class="cell">
+                                    {{ slots.booking_date }} &nbsp; {{ slots.booking_slot }}
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% else %}
+                {% endif %}
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                    <a href="{% url 'userRoomBooking' %}"> <i class="fa fa-list"></i> &nbsp;
+                    Your Bookings
+                </a>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-text">
+                    <h2>NCS</h2>
+                    <h5>| BOOKING | PLAYING | TRAINING |</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{% endblock %}
+
